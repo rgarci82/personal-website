@@ -53,7 +53,7 @@ li {
   padding: 0 60px;
   position: sticky;
   top: 0;
-  color: #edf2f4;
+  color: #adb5bd;
 }
 
 .nav__link--list {
@@ -122,12 +122,12 @@ li {
 
 .header__big--text {
   font-size: clamp(40px, 8vw, 70px);
-  color: #8d99ae;
+  color: #edf2f4;
   line-height: 1.3;
 }
 
 .header > h3 {
-  color: #edf2f4;
+  color: #9999a1;
   margin-bottom: 8px;
 }
 
@@ -135,5 +135,5 @@ li {
   max-width: 540px;
   width: 100%;
   font-size: 18px;
-  color: #edf2f4;
+  color: #9999a1;
 }
