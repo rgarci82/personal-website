@@ -1,3 +1,5 @@
+import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-scroll";
 
@@ -18,7 +20,7 @@ function LandingPage() {
             </Link>
           </li>
           <li className="nav__link">
-            <Link to="" className="nav__link--anchor">
+            <Link to="#contact" className="nav__link--anchor">
               Contact
             </Link>
           </li>
@@ -34,6 +36,22 @@ function LandingPage() {
           applications with great user experiences. Here's a bit more{" "}
           <a className="blue underline">about me</a>.
         </p>
+        <div className="social__link--list">
+          <a
+            href="https://github.com/rgarci82"
+            target="_blank"
+            className="social__link"
+          >
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/ruben-garcia-734090179/"
+            target="_blank"
+            className="social__link"
+          >
+            <FontAwesomeIcon icon={faLinkedinIn} />
+          </a>
+        </div>
       </header>
     </section>
   );
