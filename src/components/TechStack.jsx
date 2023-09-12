@@ -40,6 +40,14 @@ function TechStack({ img, title }) {
               title={"Firebase"}
             />
             <Technology img={clogo} title={"C++"} />
+            <Technology
+              img={"https://img.icons8.com/color/256/python--v1.png"}
+              title={"Python"}
+            />
+            <Technology
+              img={"https://img.icons8.com/color/256/redux.png"}
+              title={"Redux"}
+            />
           </div>
         </div>
       </div>

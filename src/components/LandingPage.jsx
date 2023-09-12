@@ -53,6 +53,9 @@ function LandingPage() {
           </a>
         </div>
       </header>
+      <Link to="techstack" className="scroll">
+        <div className="scroll__icon click"></div>
+      </Link>
     </section>
   );
 }
