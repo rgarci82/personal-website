@@ -1,4 +1,5 @@
 import LandingPage from "./components/LandingPage";
+import Projects from "./components/Projects";
 import TechStack from "./components/TechStack";
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <div className="App">
       <LandingPage />
       <TechStack />
+      <Projects />
     </div>
   );
 }

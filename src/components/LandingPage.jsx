@@ -15,18 +15,18 @@ function LandingPage() {
             </Link>
           </li>
           <li className="nav__link">
-            <Link to="" className="nav__link--anchor">
+            <Link to="projects" className="nav__link--anchor">
               Projects
             </Link>
           </li>
           <li className="nav__link">
-            <Link to="#contact" className="nav__link--anchor">
+            <Link to="contact" className="nav__link--anchor">
               Contact
             </Link>
           </li>
           <a className="btn">Resume</a>
         </ul>
-      </nav>
+        </nav>
       <header className="header">
         <h1 className="header__small--text">Hi, my name is</h1>
         <h2 className="header__big--text">Ruben Garcia.</h2>
