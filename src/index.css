@@ -24,6 +24,38 @@ a {
   cursor: pointer;
 }
 
+input, textarea{
+  width: 100%;
+  background-color: #2b2d42;
+  color: white;
+  outline: none;
+  border: 3px solid #9999a1;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  height: 40px;
+  transition: all 300ms ease;
+}
+
+label{
+  font-size: 14px;
+  font-weight: bold;
+}
+
+textarea{
+  resize: vertical;
+  height: 100px;
+  margin-top: 8px;
+}
+
+input:hover, textarea:hover{
+  border-color: #adb5bd;
+}
+
+input:focus, textarea:focus{
+  border-color: #1a8fe3;
+}
+
 .container {
   padding: 50px 0;
   width: 100%;
@@ -213,6 +245,21 @@ li {
   }
 }
 
+.mail__btn{
+  width: 70px;
+  height: 70px;
+  font-size: 32px;
+  border-radius: 50%;
+  border: none;
+  background-color: #1a8fe3;
+  color: white;
+  position: fixed;
+  bottom: 32px;
+  right: 40px;
+  z-index: 100;
+  box-shadow: 0 12px 30px 0 rgb(0, 0, 0, 0.2);
+}
+
 /*
 TECH STACK
 */
@@ -370,4 +417,151 @@ PROJECTS
 
 .project__description--para{
   margin: 16px 0;
+}
+
+/*
+
+MODAL
+
+*/
+
+.modal{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 1100px;
+  height: 700px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  visibility: hidden;
+  z-index: -1;
+  transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
+}
+
+.modal__open .modal{
+  z-index: 60;
+  box-shadow: 0 20px 80px 0 rgb(0, 0, 0, .55);
+  visibility: visible;
+}
+
+.modal__half{
+  width: 50%;
+  padding: 40px 72px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  transition: all 300ms ease-in;
+}
+
+.modal__open .modal__about,
+.modal__open .modal__contact{
+  transform: translateX(0%);
+}
+
+.modal__about{
+  background-color: #adb5bd;
+  transform: translateX(-110%);
+}
+
+.modal__contact{
+  background-color: #2b2d42;
+  color: white;
+  transform: translateX(110%);
+}
+
+.modal__title{
+  font-size: 26px;
+}
+
+.modal__sub-title{
+  margin: 12px 0 24px 0;
+  font-size: 14px;
+}
+
+.modal__para{
+  margin-bottom: 12px;
+  line-height: 1.75;
+}
+
+.form__item{
+  margin-bottom: 20px;
+}
+
+.form__submit{
+  background-color: #1a8fe3;
+  border: 2px solid #1a8fe3;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  max-width: 240px;
+  padding: 12px 24px;
+  font-size: 20px;
+  transition: all 300ms ease;
+}
+
+.form__submit:hover{
+  border-color: white;
+  background-color: transparent;
+}
+
+.form__submit:active{
+  border-color:#1a8fe3;
+  color: #1a8fe3;
+}
+
+.modal__overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+}
+
+.modal__overlay--loading{
+  background-color: #1c1d25;
+  font-size: 80px;
+}
+
+.modal__overlay--success{
+  background-color: #4bb543;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  padding: 28px;
+}
+
+.modal__overlay--visable{
+  z-index: 1;
+  display: flex;
+}
+
+.fa-spinner{
+  animation: spinner 750ms infinite linear;
+}
+
+@keyframes spinner {
+  0%{
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.modal__exit{
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: white;
+  font-size: 36px;
+  z-index: 100;
+  cursor: pointer;
 }
