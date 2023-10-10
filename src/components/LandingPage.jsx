@@ -88,17 +88,17 @@ function LandingPage({isModalOpen, setIsModalOpen}) {
             <img src={picture} alt="" className="modal__picture"/>
           </figure>
           <h4 className="modal__sub-title modal__sub-title--about">
-            Frontend Software Engineer.
+            Full Stack Software Engineer.
           </h4>
           <p className="modal__para modal__para--about">
-            I'm a 21 year-old <b className="blue">frontend software engineer</b> with
+            I'm a 21 year-old <b className="blue">full stack software engineer</b> with
             a strong passion for developing websites with great
-            <b className="blue">user experiences.</b>
+            <b className="blue"> user experiences.</b>
             <br />
             I currently work on extremely difficult engineering problems and
             learn from a team consisting of some of the most
-            <b className="blue">talented</b> and
-            <b className="blue">experienced</b> software engineers every day.
+            <b className="blue"> talented</b> and
+            <b className="blue"> experienced</b> software engineers every day.
           </p>
         </div>
         <div className="modal__half modal__contact">
