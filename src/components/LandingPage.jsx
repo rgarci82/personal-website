@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, {useRef} from "react";
 import { Link } from "react-scroll";
 import emailjs from '@emailjs/browser';
+import picture from '../assets/eport (1).jpg'
 
 function LandingPage({isModalOpen, setIsModalOpen}) {
   const form = useRef();
@@ -32,7 +33,7 @@ function LandingPage({isModalOpen, setIsModalOpen}) {
         <a className="nav__logo">Ruben.dev</a>
         <ul className="nav__link--list">
           <li className="nav__link">
-            <a className="nav__link--anchor">
+            <a className="nav__link--anchor" onClick={() => setIsModalOpen(!isModalOpen)}>
               About
             </a>
           </li>
@@ -56,7 +57,7 @@ function LandingPage({isModalOpen, setIsModalOpen}) {
         <p className="header__para">
           I'm a Software Engineer with a strong passion for building web
           applications with great user experiences. Here's a bit more{" "}
-          <a className="blue underline">about me</a>.
+          <a className="blue underline" onClick={() => setIsModalOpen(!isModalOpen)}>about me</a>.
         </p>
         <div className="social__link--list">
           <a
@@ -83,6 +84,9 @@ function LandingPage({isModalOpen, setIsModalOpen}) {
           <h3 className="modal__title modal__title--about">
             Here's a bit about me.
           </h3>
+          <figure className="modal__picture--mask">
+            <img src={picture} alt="" className="modal__picture"/>
+          </figure>
           <h4 className="modal__sub-title modal__sub-title--about">
             Frontend Software Engineer.
           </h4>
