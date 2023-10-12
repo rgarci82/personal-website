@@ -1,6 +1,6 @@
 import React from "react";
-import Technology from "./Technology";
-import clogo from "../assets/c.png";
+import Technology from "../Technology";
+import clogo from "../../assets/c.png";
 
 function TechStack({ img, title }) {
   return (

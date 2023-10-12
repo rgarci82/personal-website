@@ -1,8 +1,8 @@
 import { useState } from "react";
-import ContactModal from "./components/ContactModal";
-import LandingPage from "./components/LandingPage";
-import Projects from "./components/Projects";
-import TechStack from "./components/TechStack";
+import ContactModalIcon from "./components/ContactModalIcon";
+import LandingPage from "./components/sections/LandingPage";
+import Projects from "./components/sections/Projects";
+import TechStack from "./components/sections/TechStack";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -12,7 +12,7 @@ function App() {
       <LandingPage isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>
       <TechStack />
       <Projects />
-      <ContactModal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>
+      <ContactModalIcon isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}/>
     </div>
   );
 }

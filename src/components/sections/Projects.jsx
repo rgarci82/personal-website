@@ -1,7 +1,7 @@
 import React from 'react'
-import Project from './Project'
-import disneyclone from '../assets/disneyclone.PNG'
-import teslaclone from '../assets/teslaclone.PNG'
+import Project from '../Project'
+import disneyclone from '../../assets/disneyclone.PNG'
+import teslaclone from '../../assets/teslaclone.PNG'
 
 function Projects({ image, title, subtitle, para, githubLink, websiteLink}) {
   return (

@@ -695,6 +695,10 @@ MODAL
   .modal__half{
     width: 100%;
   }
+
+  .language{
+    width: calc(100%/4);
+  }
 }
 
 @media (max-width: 480px){
