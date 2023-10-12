@@ -1,12 +1,16 @@
 import { faGithub, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-import { faSpinner, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faBars, faSpinner, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, {useRef} from "react";
+import React, {useRef, useState} from "react";
 import { Link } from "react-scroll";
 import emailjs from '@emailjs/browser';
 import picture from '../assets/eport (1).jpg'
+import MenuBackDrop from "./MenuBackDrop";
 
 function LandingPage({isModalOpen, setIsModalOpen}) {
+
+  const [isBackDropOpen, setIsBackDropOpen] = useState(false)
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -28,7 +32,7 @@ function LandingPage({isModalOpen, setIsModalOpen}) {
     }
   
   return (
-    <section id="landing-page" className={isModalOpen ? "modal__open" : undefined}>
+    <section id="landing-page" className={[isModalOpen ? "modal__open" : undefined] + " " + [isBackDropOpen ? "menu--open" : undefined]}>
       <nav className="nav">
         <a className="nav__logo">Ruben.dev</a>
         <ul className="nav__link--list">
@@ -49,6 +53,10 @@ function LandingPage({isModalOpen, setIsModalOpen}) {
           </li>
           <a className="btn">Resume</a>
         </ul>
+        <button className="btn__menu" onClick={() => setIsBackDropOpen(!isBackDropOpen)}>
+          <FontAwesomeIcon icon={faBars}/>
+        </button>
+        <MenuBackDrop setIsBackDropOpen={setIsBackDropOpen} isBackDropOpen={isBackDropOpen} setIsModalOpen={setIsModalOpen} isModalOpen={isModalOpen}/>
         </nav>
       <header className="header">
         <h1 className="header__small--text">Hi, my name is</h1>
