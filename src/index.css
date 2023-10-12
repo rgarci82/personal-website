@@ -336,6 +336,10 @@ PROJECTS
 
 */
 
+#projects{
+  padding: 0 20px3;
+}
+
 #projects .row{
   max-width: 1000px;
 }
@@ -425,6 +429,11 @@ MODAL
 
 */
 
+.modal__open .nav{
+  opacity: 0;
+  transition: all 300ms ease;
+}
+
 .modal{
   position: absolute;
   top: 50%;
@@ -505,6 +514,7 @@ MODAL
   padding: 12px 24px;
   font-size: 20px;
   transition: all 300ms ease;
+  border-radius: 4px;
 }
 
 .form__submit:hover{
