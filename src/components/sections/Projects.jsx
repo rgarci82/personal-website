@@ -3,6 +3,7 @@ import Project from "../Project";
 import disneyclone from "../../assets/disneyclone.PNG";
 import teslaclone from "../../assets/teslaclone.PNG";
 import ecommerce from "../../assets/ecommerce.JPG";
+import treact from "../../assets/treactclone.JPG";
 
 function Projects({ image, title, subtitle, para, githubLink, websiteLink }) {
   return (
@@ -13,6 +14,16 @@ function Projects({ image, title, subtitle, para, githubLink, websiteLink }) {
             Here are some of my <span className="blue">projects</span>
           </h1>
           <ul className="project__list">
+            <Project
+              title={"Treact Clone"}
+              image={treact}
+              subtitle={"HTML, CSS, JavaScript"}
+              githubLink={"https://github.com/rgarci82/Treact-Website-Clone"}
+              websiteLink={"https://rgarci82.github.io/Treact-Website-Clone/"}
+              para={
+                "Created a clone of the Treact Template using only HTML, CSS"
+              }
+            />
             <Project
               title={"E-Commerce"}
               image={ecommerce}
